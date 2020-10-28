@@ -68,11 +68,13 @@ referencing, and then the error is our replacement for the `lodash` code.
 ## Going Back
 
 Finally, to go back to the non-linked version (and this is the currently-cumbersome part), you'll
-need to first remove the `node_modules` directories in all of the packages (I find this gets PNPM
-to reset the linked packages, otherwise it just uses the linked package again), and then run
-`rush update --full` to re-install all the dependencies. From the `rush-two` folder:
+need to first reset your `links.json` file, then remove the `node_modules` directories in all of
+the packages (I find this gets PNPM to reset the linked packages, otherwise it just uses the linked
+package again), and then run `rush update --full` to re-install all the dependencies. From the
+`rush-two` folder:
 
 ```
+echo "{}" > common/config/links.json
 rm -rf */*/node_modules
 rush update --full
 ```
