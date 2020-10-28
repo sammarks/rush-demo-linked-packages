@@ -1,0 +1,7 @@
+{
+  "roots": {
+    "../rush-one": {
+      "lodash": "packages/lodash"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.33.2",
+  "pnpmVersion": "5.5.13",
+  "repository": {
+    "url": "git@github.com:sammarks/rush-demo-linked-packages.git"
+  },
+  "projects": [
+    {
+      "packageName": "@test/project-two",
+      "projectFolder": "packages/project-two",
+      "versionPolicyName": "core"
+    },
+    {
+      "packageName": "@test/project-three",
+      "projectFolder": "packages/project-three",
+      "versionPolicyName": "core"
+    }
+  ],
+  "ensureConsistentVersions": true,
+  "pnpmOptions": {
+    "strictPeerDependencies": false,
+    "pnpmStore": "local",
+    "useWorkspaces": true
+  }
+}

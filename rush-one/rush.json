@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.33.2",
+  "pnpmVersion": "5.5.13",
+  "repository": {
+    "url": "git@github.com:sammarks/rush-demo-linked-packages.git"
+  },
+  "projects": [
+    {
+      "packageName": "@test/project-one",
+      "projectFolder": "packages/project-one",
+      "versionPolicyName": "core"
+    },
+    {
+      "packageName": "lodash",
+      "projectFolder": "packages/lodash",
+      "versionPolicyName": "core"
+    }
+  ],
+  "ensureConsistentVersions": true,
+  "pnpmOptions": {
+    "strictPeerDependencies": false,
+    "pnpmStore": "local",
+    "useWorkspaces": true
+  }
+}

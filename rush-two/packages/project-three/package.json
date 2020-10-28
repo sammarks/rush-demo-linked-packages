@@ -1,0 +1,27 @@
+{
+  "name": "@test/project-three",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "files": ["dist"],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "build": "heft build --clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/sammarks/rush-demo-linked-packages.git",
+    "directory": "rush-two/packages/project-three"
+  },
+  "dependencies": {
+    "@test/project-two": "workspace:*"
+  },
+  "devDependencies": {
+    "@rushstack/heft": "^0.17.4",
+    "@types/node": "^14.14.5",
+    "typescript": "^4.0.2"
+  }
+}
